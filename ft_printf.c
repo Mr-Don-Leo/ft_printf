@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbabayan <mbabayan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/03 11:49:10 by mbabayan          #+#    #+#             */
-/*   Updated: 2023/12/03 11:52:53 by mbabayan         ###   ########.fr       */
+/*   Created: 2023/12/03 12:45:31 by mbabayan          #+#    #+#             */
+/*   Updated: 2023/12/03 12:45:53 by mbabayan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-#define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <stddef.h>
-# include <unistd.h>
+int		ft_printf(const char *s, ...)
+{
+	va_list	arguments;
+	int	index;
 
-#endif FT_PRINTF_H
+	index = 0;
+	va_start(arguments, s);
+
+}
