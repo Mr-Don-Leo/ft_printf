@@ -19,14 +19,14 @@ int	output_str(va_list arguments)
 
 	string = va_arg(arguments, char *);
 	printed_count = 0;
-	if (!string)
+	if (string == NULL)
 	{
 		ft_putstr("(null)");
 		return (6);
 	}
 	while (string[printed_count])
 	{
-		ft_putchar(*string);
+		ft_putchar(string[printed_count]);
 		printed_count++;
 	}
 	return (printed_count);

@@ -12,14 +12,25 @@
 
 #include "ft_printf.h"
 
+int	putpointer(size_t pointer, char *hex_base)
+{
+	int	c;
+
+	c = 0;
+	if (pointer >= 16)
+		c += putpointer(pointer / 16, hex_base);
+	ft_putchar(hex_base[pointer % 16]);
+	c++;
+	return (c);
+}
+
 int	output_pointer(va_list arguments)
 {
-	int printed_count;
-	size_t number;
+	int		count;
+	size_t	pointer;
 
-	number = va_arg(arguments, unsigned long);
+	pointer = va_arg(arguments, size_t);
 	ft_putstr("0x");
-	printed_count = 2;
-	printed_count += ft_puthex(number, 'x');
-	return (printed_count);
+	count =  putpointer(pointer, "0123456789abcdef");
+	return (count + 2);
 }

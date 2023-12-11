@@ -16,17 +16,14 @@
  * Calling write function with file descriptor,
  * string pointer, and string length
  */
-int	ft_strlen(char *string)
+void	ft_putstr(char *string)
 {
 	int	index;
 
 	index = 0;
-	while (string[index] != '\0')
+	while (string[index])
+	{
+		write(1, &string[index], 1);
 		index++;
-	return (index);
-}
-
-void	ft_putstr(char *string)
-{
-	write(1, string, ft_strlen(string));
+	}
 }
