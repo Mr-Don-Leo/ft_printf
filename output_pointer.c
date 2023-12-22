@@ -31,6 +31,6 @@ int	output_pointer(va_list arguments)
 
 	pointer = va_arg(arguments, size_t);
 	ft_putstr("0x");
-	count =  putpointer(pointer, "0123456789abcdef");
+	count = output_hexa(pointer, 'x');
 	return (count + 2);
 }

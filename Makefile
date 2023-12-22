@@ -5,7 +5,7 @@ NAME = libftprintf.a
 # These are the compiler flags that will be used
 COMP_FLAGS = -Wall -Werror -Wextra
 
-SRCS = ft_printf.c ft_putchar.c ft_putnbr.c ft_putstr.c output_char.c output_str.c \
+SRCS = ft_printf.c print_utils.c output_char.c output_str.c \
 		output_int.c output_hexa.c output_pointer.c output_unsigned.c\
 
 OBJ = $(SRCS:.c=.o)

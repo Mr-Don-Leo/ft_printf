@@ -24,7 +24,7 @@ int	parse(char c, va_list arguments)
 	else if (c == 'i' || c == 'd')
 		printed_count += output_int(arguments);
 	else if (c == 'x' || c == 'X')
-		printed_count += output_hexa(arguments, c);
+		printed_count += output_hexa(va_arg(arguments, unsigned int), c);
 	else if (c == 'p')
 		printed_count += output_pointer(arguments);
 	else if (c == 'u')
